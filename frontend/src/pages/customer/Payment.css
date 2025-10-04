@@ -1,0 +1,240 @@
+.payment-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.payment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.payment-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 1rem 1.5rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+.payment-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.payment-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.payment-methods-card,
+.delivery-address-card,
+.order-summary-card {
+  padding: 2rem;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 3px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.payment-method:hover {
+  border-color: #cbd5e1;
+  transform: translateX(4px);
+}
+
+.payment-method.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.payment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  color: #3b82f6;
+}
+
+.payment-method.selected .payment-icon {
+  background: #dbeafe;
+}
+
+.payment-details {
+  flex: 1;
+}
+
+.payment-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.payment-description {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.payment-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #3b82f6;
+  border-radius: 50%;
+  color: white;
+}
+
+.address-display {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.address-display svg {
+  flex-shrink: 0;
+  color: #3b82f6;
+  margin-top: 0.25rem;
+}
+
+.address-text {
+  flex: 1;
+}
+
+.address-text strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.address-text p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.payment-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.order-item span:first-child {
+  color: #64748b;
+}
+
+.order-item span:last-child {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.price-line.discount {
+  color: #059669;
+  font-weight: 600;
+}
+
+.price-line.total {
+  padding-top: 1rem;
+  border-top: 2px solid #e2e8f0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+@media (max-width: 1024px) {
+  .payment-content {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .payment-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .payment-methods-card,
+  .delivery-address-card,
+  .order-summary-card {
+    padding: 1.5rem;
+  }
+
+  .payment-method {
+    flex-wrap: wrap;
+  }
+
+  .payment-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
